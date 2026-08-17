@@ -9,7 +9,7 @@ else:
 
 #to continue with or without construction
 
-cont = input("Welcome! If you want the game instructions write 'yes',otherwise write 'no'")
+cont = input("Welcome! If you want the game instructions write 'yes',otherwise write 'no' \n ")
 
 if cont.lower() == "yes":
     print("Here are the rules of the game: " \
@@ -29,5 +29,26 @@ def roll_dice():
     print("The sum is:", die1 + die2)
 
     return die1 + die2
+total = roll_dice()
 
-roll_dice()
+if total in (7, 11):
+    result = "Congratulations, you won!"
+
+elif total in (2, 3, 12):
+    result = "You lost, try again!"
+
+else:
+    result = "Continue trying.."
+    point = total
+    print("Your point is:", point)
+
+    while result == "Continue trying..":
+        total = roll_dice()
+
+        if total == point:
+            result = "Congratulations, you won!"
+
+        elif total == 7:
+            result = "You lost, you rolled a 7!"
+
+print(result)
