@@ -1,5 +1,6 @@
 import random
 import sys
+import time
 
 ans = input("To start the game write 'yes' to quit write 'no'\n")
 if ans.lower() == "no":
@@ -23,6 +24,7 @@ elif cont.lower() == "no":
 def roll_dice():
     die1 = random.randint(1, 6)
     die2 = random.randint(1, 6)
+    time.sleep(3)
 
     print("You rolled:", die1, "and", die2)
     print("The sum is:", die1 + die2)
