@@ -29,10 +29,15 @@ The rules of the game are:
 This project uses:
 
 -Variables
+
 -Conditions
+
 -Functions
+
 -Loops
+
 -Arrays
+
 -Strings
 
 ## How to Run
